@@ -1,0 +1,13 @@
+{% if account %}
+    用户名:{{ account.username }}<br/>
+    邮箱:{{ account.email }}<br/>
+    性别:{{ account.gender }}<br/>
+    年龄:{{ account.age }}<br/>
+    头像:<img src = '{{ account.icon.url }}'/><br/>
+    创建时间:{{ account.create_date }}<br/>
+{% endif %}
+
+<br/>
+<a href="{% url 'account:logout_view' %}">登出</a>
+<a href="{% url 'account:change_password' %} }">修改密码</a>
+<a href="{% url 'account:upload' %} }">上传文件</a>
